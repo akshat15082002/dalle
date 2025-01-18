@@ -32,7 +32,7 @@ const CreatePost = () => {
     try{
       const response=await axios.post('http://localhost:8080/api/v1/face/',{prompt:form.prompt},{ responseType: 'arraybuffer' });
       const base64Image=bufferToBase64(response.data);
-      // console.log(base64Image);
+      console.log(base64Image);
       setForm({ ...form, photo: base64Image });
       console.log(form.photo.length);
       console.log(form);

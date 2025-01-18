@@ -6,6 +6,7 @@ import postRoutes from './routes/post.routes.js';
 import dalleRoutes from './routes/dalle.routes.js';
 import faceRoutes from './routes/face.routes.js';
 import bodyParser from 'body-parser';
+import geminiRoutes from './routes/gemini.routes.js';
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ app.use(express.json({limit:"50mb"}));
 app.use('/api/v1/posts',postRoutes);
 app.use('/api/v1/dalle',dalleRoutes);
 app.use('/api/v1/face',faceRoutes);
+app.use('/api/v1/gemini',geminiRoutes);
+
 
 
 app.get('/',(req,res)=>{
